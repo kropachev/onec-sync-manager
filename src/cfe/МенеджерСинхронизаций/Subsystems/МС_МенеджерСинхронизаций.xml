@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Subsystem uuid="5311f62c-b948-468c-a87c-6db4e424cf33">
+		<Properties>
+			<Name>МС_МенеджерСинхронизаций</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Connect</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер синхронизаций (МС)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.МС_МенеджерСинхронизаций</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.МС_ОсновнаяРоль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">035f765e-c54f-4350-945a-08b6c1b80762</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.МС_ЗапросыКВнешнимИсточникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b9d6121f-c330-40f4-b4bf-017dae41ac30</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">7167acc5-9c9c-4ba2-ab16-c55a61c425d5</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">8717d731-e20c-4b95-8ceb-9ba171126931</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МС_ОбщегоНазначенияСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МС_СинхронизацияВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МС_СинхронизацияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МС_СинхронизацияКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МС_СинхронизацияСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">338a563d-3560-4fee-b97f-5ae99a7e3479</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">83c599aa-6f0a-4cf4-9752-5ac713eebe6a</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.МС_НастройкиИнтеграцииБазовыеПрава</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">0573b21d-525a-4280-ba1c-aad8dd3d1ff6</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.МС_ФормаЗагрузкиИзТабличногоДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МС_МенеджерСинхронизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.МС_НастройкиПодключений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.МС_НастройкиСинхронизации</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

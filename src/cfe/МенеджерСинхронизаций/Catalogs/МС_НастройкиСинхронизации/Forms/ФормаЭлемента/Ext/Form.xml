@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьОбмен" id="109">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьОбменРасширеннаяПодсказка" id="110"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименованиеКод" id="29">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Соединение" id="7">
+			<DataPath>Объект.Соединение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СоединениеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СоединениеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаПериод" id="31">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПериодДаты" id="52">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаПериодДатыРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<InputField name="НачалоПериода" id="33">
+							<DataPath>Объект.НачалоПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период с</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<InputField name="ОкончаниеПериода" id="36">
+							<DataPath>Объект.ОкончаниеПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>по</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОкончаниеПериодаКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ОкончаниеПериодаРасширеннаяПодсказка" id="38"/>
+						</InputField>
+						<CheckBoxField name="ВычисляемыйПериод" id="62">
+							<DataPath>Объект.ВычисляемыйПериод</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВычисляемыйПериодКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ВычисляемыйПериодРасширеннаяПодсказка" id="64"/>
+							<Events>
+								<Event name="OnChange">ВычисляемыйПериод1ПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПериодВычисляемый" id="80">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаПериодВычисляемыйРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПериодВычисляемыйЗаголовки" id="82">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаПериодВычисляемыйЗаголовкиРасширеннаяПодсказка" id="83"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНачаоПериода" id="86">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период с:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНачаоПериодаКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ДекорацияНачаоПериодаРасширеннаяПодсказка" id="88"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПериодВычисляемыйНачало" id="84">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодВычисляемыйНачалоРасширеннаяПодсказка" id="85"/>
+							<ChildItems>
+								<InputField name="ВычисляемыйПериодНачалоПериодаРезультат" id="72">
+									<DataPath>ВычисляемыйПериодНачалоПериодаРезультат</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ВычисляемыйПериодНачалоПериодаРезультатКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ВычисляемыйПериодНачалоПериодаРезультатРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="ВычисляемыйПериодНачалоПериода" id="56">
+									<DataPath>Объект.ВычисляемыйПериодНачалоПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начало периода</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<MultiLine>true</MultiLine>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДобавитьМесяц(НачалоМесяца(ТекущаяДата), - 1)</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ВычисляемыйПериодНачалоПериодаКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ВычисляемыйПериодНачалоПериодаРасширеннаяПодсказка" id="58"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПериодВычисляемыйЗаголовки1" id="91">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодВычисляемыйЗаголовки1РасширеннаяПодсказка" id="92"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНачаоПериода1" id="93">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНачаоПериода1КонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ДекорацияНачаоПериода1РасширеннаяПодсказка" id="95"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПериодВычисляемыйОкончание" id="89">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодВычисляемыйОкончаниеРасширеннаяПодсказка" id="90"/>
+							<ChildItems>
+								<InputField name="ВычисляемыйПериодОкончаниеПериодаРезультат" id="75">
+									<DataPath>ВычисляемыйПериодОкончаниеПериодаРезультат</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ВычисляемыйПериодОкончаниеПериодаРезультатКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ВычисляемыйПериодОкончаниеПериодаРезультатРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="ВычисляемыйПериодОкончаниеПериода" id="59">
+									<DataPath>Объект.ВычисляемыйПериодОкончаниеПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<MultiLine>true</MultiLine>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>КонецДня(ТекущаяДата())</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ВычисляемыйПериодОкончаниеПериодаКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ВычисляемыйПериодОкончаниеПериодаРасширеннаяПодсказка" id="61"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПериодВычисляемыйКнопки" id="96">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодВычисляемыйКнопкиРасширеннаяПодсказка" id="97"/>
+							<ChildItems>
+								<CheckBoxField name="ВычисляемыйПериод1" id="65">
+									<DataPath>Объект.ВычисляемыйПериод</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВычисляемыйПериод1КонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ВычисляемыйПериод1РасширеннаяПодсказка" id="67"/>
+									<Events>
+										<Event name="OnChange">ВычисляемыйПериод1ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<Button name="ВычислитьПериод" id="78">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВычислитьПериод</CommandName>
+									<ExtendedTooltip name="ВычислитьПериодРасширеннаяПодсказка" id="79"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="47">
+			<DataPath>1/0:baa7abc9-c434-43b0-97d3-6c96404417ba</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<UsualGroup name="ГруппаЗаписьДокументов" id="98">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаписьДокументовРасширеннаяПодсказка" id="99"/>
+			<ChildItems>
+				<CheckBoxField name="ПерезаписыватьДокументы" id="44">
+					<DataPath>Объект.ПерезаписыватьДокументы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПерезаписыватьДокументыКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПерезаписыватьДокументыРасширеннаяПодсказка" id="46"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПроводитьДокументы" id="100">
+					<DataPath>Объект.ПроводитьДокументы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроводитьДокументыКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ПроводитьДокументыРасширеннаяПодсказка" id="102"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПерезаписыватьСправочники" id="103">
+			<DataPath>Объект.ПерезаписыватьСправочники</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПерезаписыватьСправочникиКонтекстноеМеню" id="104"/>
+			<ExtendedTooltip name="ПерезаписыватьСправочникиРасширеннаяПодсказка" id="105"/>
+		</CheckBoxField>
+		<Table name="НастройкиЗагрузки" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.НастройкиЗагрузки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НастройкиЗагрузкиКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="НастройкиЗагрузкиКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="НастройкиЗагрузкиРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="НастройкиЗагрузкиСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>НастройкиЗагрузки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиЗагрузкиСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="НастройкиЗагрузкиСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НастройкиЗагрузкиСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>НастройкиЗагрузки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиЗагрузкиСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="НастройкиЗагрузкиСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НастройкиЗагрузкиУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>НастройкиЗагрузки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиЗагрузкиУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="НастройкиЗагрузкиУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="НастройкиЗагрузкиАктивно" id="39">
+					<DataPath>Объект.НастройкиЗагрузки.Активно</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НастройкиЗагрузкиАктивноКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="НастройкиЗагрузкиАктивноРасширеннаяПодсказка" id="41"/>
+				</CheckBoxField>
+				<InputField name="НастройкиЗагрузкиНастройкаЗагрузки" id="26">
+					<DataPath>Объект.НастройкиЗагрузки.НастройкаЗагрузки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкиЗагрузкиНастройкаЗагрузкиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="НастройкиЗагрузкиНастройкаЗагрузкиРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="НастройкиЗагрузкиПолноеИмяФормы" id="106">
+					<DataPath>Объект.НастройкиЗагрузки.ПолноеИмяФормы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<MultiLine>true</MultiLine>
+					<ChoiceButton>true</ChoiceButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="НастройкиЗагрузкиПолноеИмяФормыКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="НастройкиЗагрузкиПолноеИмяФормыРасширеннаяПодсказка" id="108"/>
+					<Events>
+						<Event name="StartChoice">НастройкиЗагрузкиПолноеИмяФормыНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Button name="НастроитьРасписаниеОбмена" id="50">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.НастроитьРасписаниеОбмена</CommandName>
+			<ExtendedTooltip name="НастроитьРасписаниеОбменаРасширеннаяПодсказка" id="51"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.МС_НастройкиСинхронизации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РасписаниеРегламентногоЗадания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание регламентного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВычисляемыйПериодНачалоПериодаРезультат" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычисляемыйПериодОкончаниеПериодаРезультат" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окнчание периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьРасписаниеОбмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НастроитьРасписаниеОбмена</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВычислитьПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычислить период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычислить период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВычислитьПериод</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыполнитьОбмен" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОбмен</Action>
+		</Command>
+	</Commands>
+</Form>
